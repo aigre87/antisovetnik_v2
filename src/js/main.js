@@ -19,6 +19,15 @@
   //     }
   //   }
   // }
+  function isJSON(){
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }
+
   var myGlobalisMobileDevice = false;
   window.mobileAndTabletcheck = function() {
     myGlobalisMobileDevice = false;
@@ -100,12 +109,12 @@
       if (typeof dataScroll == 'undefined') { return false; }
       e.preventDefault();
       disableScroll();
-      if( $(e.target).closest(".menuBlock").length > 0 ){
-        mobileMenu("close");
-      }
+      // if( $(e.target).closest(".menuBlock").length > 0 ){
+      //   mobileMenu("close");
+      // }
       TweenLite.to(window, 0.8, {
         ease: Sine.easeInOut,
-        scrollTo: $("" + dataScroll + "").offset().top - $("header").outerHeight(),
+        scrollTo: $("" + dataScroll + "").offset().top,
         onComplete: function() {
           enableScroll();
         }
@@ -263,26 +272,26 @@
         dataType: 'json',
         success: function(response) {
           submit.removeClass('loading');
-          if (response.status != 'ok') {
-            $.magnificPopup.open({
-              items: {
-                src: "<div class='defaultPopupContent mfp-with-anim'>Ошибка сервера, попробуйте отправить еще раз или позвоните по телефону +7 (495) 120-32-30</div>",
-                type: 'inline'
-              },
-              removalDelay: 500, //delay removal by X to allow out-animation
-              closeBtnInside: true,
-              mainClass: 'mfp-with-zoom',
-              callbacks: {
-                beforeOpen: function() {
-                  this.st.mainClass = "mfp-zoom-in defaultPopup";
-                },
-                beforeClose: function() {
+          // if (response.status != 'ok') {
+          //   $.magnificPopup.open({
+          //     items: {
+          //       src: "<div class='defaultPopupContent mfp-with-anim'>Ошибка сервера, попробуйте отправить еще раз или позвоните по телефону +7 (495) 120-32-30</div>",
+          //       type: 'inline'
+          //     },
+          //     removalDelay: 500, //delay removal by X to allow out-animation
+          //     closeBtnInside: true,
+          //     mainClass: 'mfp-with-zoom',
+          //     callbacks: {
+          //       beforeOpen: function() {
+          //         this.st.mainClass = "mfp-zoom-in defaultPopup";
+          //       },
+          //       beforeClose: function() {
 
-                },
-              },
-              midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-            });
-          } else {
+          //       },
+          //     },
+          //     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+          //   });
+          // } else {
             $.magnificPopup.open({
               items: {
                 src: "<div class='defaultPopupContent mfp-with-anim'>Заявка принята, спасибо. В ближайшее время мы свяжемся с вами<br/><br/>Если у вас есть вопросы - звоните, будем рады:<br/>+7 (495) 120-32-30</div>",
@@ -302,7 +311,7 @@
               midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
             });
             submit.prop('disabled', true);
-          }
+          //}
 
 
         },
@@ -443,12 +452,12 @@
                               dataType: 'json',
                               success: function(response) {
                                   submit.removeClass('loading');
-                                  if (response.status != 'ok') {
-                                      $(".mfp-content .response").removeClass("error good").html("Ошибка сервера, попробуйте отправить еще раз или позвоните по телефону +7 (495) 120-32-30").addClass("error");
-                                  } else {
+                                  // if (response.status != 'ok') {
+                                  //     $(".mfp-content .response").removeClass("error good").html("Ошибка сервера, попробуйте отправить еще раз или позвоните по телефону +7 (495) 120-32-30").addClass("error");
+                                  // } else {
                                       $(".mfp-content .response").removeClass("error good").html("Заявка принята, спасибо. В ближайшее время мы свяжемся с вами<br/><br/>Если у вас есть вопросы - звоните, будем рады:<br/>+7 (495) 120-32-30").addClass("good");
                                       submit.prop('disabled', true);
-                                  }
+                                  //}
 
 
                               },
@@ -508,7 +517,7 @@
 
   $(document).ready(function() {
     svg4everybody({});
-    mobileMenu("init");
+    //mobileMenu("init");
     linkscrollto();
     formsActions();
     getScriptForm();

@@ -7,7 +7,7 @@ $maket320: 800px;
 
 .yaAntisovLand {
   #mainWrapper{
-    font-family: "Open Sans";
+    font-family: "Roboto";
     overflow: hidden;
     margin: 0 auto;
     max-width: 2560px;
@@ -88,11 +88,11 @@ $maket320: 800px;
     }
   }
   #paralax2{
-    opacity: 0.2;
+    opacity: 0.28;
     background-image: url("../images/b3-img1.jpg");
     background-position: 50% 0%;
     @media only screen and ( max-width: 1920px ) {
-      background-image: url("../images/b3-img1-m.jpg");
+
     }
     @media only screen and ( max-width: 800px ) {
       background-image: url("../images/b3-img1-s.jpg");
@@ -234,235 +234,354 @@ $maket320: 800px;
     }
   }
 
-  header { 
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: background 0.15s ease-in-out;
-    @media only screen and (max-width: $maket320){
-      background-color: transparent;
-      &.active{
-        height: 100%;
-      }      
-    }
-    .layout { 
-      transition: all 0.15s ease-in-out;
-      height: 65px;
-      @media only screen and (max-width: $maket1024){
-        height: 70px;
-      }
-      @media only screen and (max-width: $maket320){
+  // header { 
+  //   position: fixed;
+  //   z-index: 100;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   transition: background 0.15s ease-in-out;
+  //   @media only screen and (max-width: $maket320){
+  //     background-color: transparent;
+  //     &.active{
+  //       height: 100%;
+  //     }      
+  //   }
+  //   .layout { 
+  //     transition: all 0.15s ease-in-out;
+  //     height: 65px;
+  //     @media only screen and (max-width: $maket1024){
+  //       height: 70px;
+  //     }
+  //     @media only screen and (max-width: $maket320){
         
-      }
-    }
-    &.scroll{
-      background-color: rgba(0, 39, 165, 0.6);
-      @media only screen and (max-width: $maket320){
-        background-color: transparent;
-      }
-      .layout { 
-        height: 65px;
-        @media only screen and (max-width: $maket1024){
-          height: 70px;
-        }
-        @media only screen and (max-width: $maket320){
-          background-color: rgba(0, 39, 165, 0.6);
-          height: 50px;
-          .logo svg{
-            padding-top: 2px;
-          }
-          .menuBlock .mobileButton{
-            top: 22px;
-          } 
-        }
-      }
-    }
+  //     }
+  //   }
+  //   &.scroll{
+  //     background-color: rgba(0, 39, 165, 0.6);
+  //     @media only screen and (max-width: $maket320){
+  //       background-color: transparent;
+  //     }
+  //     .layout { 
+  //       height: 65px;
+  //       @media only screen and (max-width: $maket1024){
+  //         height: 70px;
+  //       }
+  //       @media only screen and (max-width: $maket320){
+  //         background-color: rgba(0, 39, 165, 0.6);
+  //         height: 50px;
+  //         .logo svg{
+  //           padding-top: 2px;
+  //         }
+  //         .menuBlock .mobileButton{
+  //           top: 22px;
+  //         } 
+  //       }
+  //     }
+  //   }
 
-    .shadow{
-      display: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      opacity: 0;
-      z-index: 100;
-      left: 0;
-      top: 0;
-      transition: opacity 0.15s ease;
-      @media only screen and (max-width: $maket320){
-        &.active{
-          opacity: 0.5;
-          display: block;
-        }        
-      }
+  //   .shadow{
+  //     display: none;
+  //     position: absolute;
+  //     width: 100%;
+  //     height: 100%;
+  //     background: #000;
+  //     opacity: 0;
+  //     z-index: 100;
+  //     left: 0;
+  //     top: 0;
+  //     transition: opacity 0.15s ease;
+  //     @media only screen and (max-width: $maket320){
+  //       &.active{
+  //         opacity: 0.5;
+  //         display: block;
+  //       }        
+  //     }
 
+  //   }
+
+  //   .layout { 
+  //     position: static;
+  //     display: flex;
+  //     flex-direction: row;
+  //     display: flex;
+  //     align-items: center;
+  //     .logo { 
+        
+  //       svg { 
+  //         transition: padding 0.12s ease-in-out;
+  //         display: block;
+  //         width: 162px;
+  //         height: 39px;
+  //         @media only screen and (max-width: $maket800){
+  //           width: 146px;
+  //           height: 30px;
+  //         }
+  //         @media only screen and (max-width: $maket320){
+  //           width: 102px;
+  //           height: 50px;
+  //           padding-top: 10px;
+  //         }
+
+  //       }
+  //     }
+
+  //     .menuBlock { 
+  //       flex: 0 0 auto;
+  //       margin-left: auto;
+  //       margin-bottom: 6px;
+  //       z-index: 101;
+  //       @media only screen and (max-width: $maket800){
+  //         margin-bottom: 4px;
+  //       }
+
+  //       .mobileButton { 
+  //         display: none;
+  //         position: absolute;
+  //         right: 28px;
+  //         top: 34px;
+  //         z-index: 2;
+  //         cursor: pointer;
+  //         transition: all 0.15s ease-in-out;
+  //         @media only screen and (max-width: $maket320){
+  //           display: block;
+  //         }
+  //         .line{
+  //           width: 12px;
+  //           height: 2px;
+  //           background: #fff;
+  //           margin-bottom: 2px;
+  //           &:first-child{
+  //             transform-origin: 100% 0;
+  //             transition: all 0.2s ease;
+  //           }
+  //           &:nth-child(2){
+  //             transition: all 0.15s ease;
+  //             opacity: 1;
+  //           }
+  //           &:last-child{
+  //             transition: all 0.2s ease;
+  //             transform-origin: 100% 100%;
+  //           }
+  //         }
+  //         &.active{
+  //           .line{
+  //             margin-bottom: 4px;
+  //             &:first-child{
+  //               transform: rotate(-45deg);
+  //               width: 18px;
+  //             }
+  //             &:nth-child(2){
+  //               opacity: 0;
+  //               width: 18px;
+  //             }
+  //             &:last-child{
+  //               transform: rotate(45deg);
+  //               width: 18px;
+  //             }
+  //           }
+  //         }
+  //       }
+
+  //       .menu { 
+  //         width: 100%;
+  //         display: flex;
+  //         flex-direction: row;
+  //         @media only screen and (max-width: $maket320){
+  //           position: absolute;
+  //           right: 0;
+  //           top: 0;
+  //           flex-direction: column;
+  //           justify-content: flex-end;
+  //           width: 260px;
+  //           background: #0027a5;
+  //           padding-left: 29px;
+  //           padding-top: 82px;
+  //           padding-bottom: 57px;
+  //           padding-right: 15px;
+  //           border-radius: 0 0 0 8px;
+  //         }
+  //         .item { 
+  //           font-size: 15px;
+  //           height: 34px;
+  //           line-height: 34px;
+  //           justify-content: flex-end;
+  //           margin-left: 40px;
+  //           color: #fff;
+  //           cursor: pointer;
+  //           position: relative;
+  //           &:first-child{
+  //             margin-left: 0;
+  //           }
+  //           @media only screen and (max-width: $maket1024){
+  //             margin-left: 35px;
+  //           }
+            
+  //           @media only screen and (max-width: $maket800){
+  //             font-size: 14px;
+  //             margin-left: 19px;
+  //           }
+  //           @media only screen and (max-width: 860px){
+  //             font-size: 13px;
+  //             margin-left: 15px;
+  //           }
+  //           @media only screen and (max-width: $maket320){
+  //             font-size: 14px;
+  //             line-height: 26px;
+  //             margin-left: 0;
+  //             height: auto;
+  //             margin-bottom: 14px;
+  //             &:last-child{
+  //               margin-bottom: 0;
+  //             }
+  //             &:after{
+  //               display: none;
+  //             }
+  //           }
+  //           &:after{
+  //             content: '';
+  //             background: transparent;
+  //             width: 100%;
+  //             height: 2px;
+  //             position: absolute;
+  //             bottom: 0;
+  //             left: 0;
+  //             transition: all 0.12s ease-in-out;
+  //           }
+  //           &:hover{
+  //             &:after{
+  //               background: #fff;
+  //             }
+  //           }
+  //         }
+  //         @media only screen and (max-width: $maket320){
+  //           transform: translateX(100%);
+  //           transition: transform 0.2s ease;
+  //           &.active{
+  //             transform: translateX(0%)
+  //           }
+  //         }
+  //       }
+  //     }/*end menuBlock*/
+  //   }
+  // }
+  header{
+    padding-top: 26px;
+    padding-bottom: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @media only screen and (max-width: $maket800){
+      padding-bottom: 10px;
     }
-
-    .layout { 
-      position: static;
-      display: flex;
-      flex-direction: row;
+    @media only screen and (max-width: $maket320){
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media only screen and (max-width: 1280px){
+      flex-direction: column;
+    }
+    .logo{
       display: flex;
       align-items: center;
-      .logo { 
-        
-        svg { 
-          transition: padding 0.12s ease-in-out;
-          display: block;
-          width: 162px;
-          height: 39px;
-          @media only screen and (max-width: $maket800){
-            width: 146px;
-            height: 30px;
-          }
-          @media only screen and (max-width: $maket320){
-            width: 102px;
-            height: 50px;
-            padding-top: 10px;
-          }
+      flex-direction: column;
+      text-decoration: none;
 
+      svg{
+        width: 195px;
+        height: 55px;
+        @media only screen and (max-width: $maket320){
+          width: 100px;
+          height: 30px;
         }
       }
-
-      .menuBlock { 
-        flex: 0 0 auto;
-        margin-left: auto;
-        margin-bottom: 6px;
-        z-index: 101;
-        @media only screen and (max-width: $maket800){
-          margin-bottom: 4px;
+      .txt{
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 28px;
+        color: #fff;
+        font-size: 20px;
+        width: 100%;
+        background: #c03972;
+        text-transform: uppercase;
+        text-decoration: none;
+        @media only screen and (max-width: $maket320){
+          font-size: 14px;
+          height: 20px;
+          padding: 0 3px;
         }
-
-        .mobileButton { 
-          display: none;
+      }
+    }
+    .text{
+      flex: 1 1 auto;
+      margin-left: 30px;
+      font-size: 39px;
+      line-height: 39px;
+      color: map-get($colors, grayText);
+      @media only screen and (max-width: 1280px){
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      @media only screen and (max-width: $maket800){
+        margin-top: 45px;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+      @media only screen and (max-width: $maket320){
+        font-size: 20px;
+        line-height: 22px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      .txt{
+        position: relative;
+        z-index: 1;
+      }
+      .withbg{
+        position: relative;
+        text-transform: uppercase;
+        span{
+          position: relative;
+          z-index: 1;
+        }
+        &:before{
+          margin-left: -14px;
+          margin-top: -4px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          content: '';
+          display: block;
           position: absolute;
-          right: 28px;
-          top: 34px;
-          z-index: 2;
-          cursor: pointer;
-          transition: all 0.15s ease-in-out;
-          @media only screen and (max-width: $maket320){
-            display: block;
+          width: 176px;
+          height: 110px;
+          background: transparent url("../images/headerbg.png") center center;
+          background-image: url("../images/headerbg.png");
+          background-size:  auto 100%;
+          background-repeat: no-repeat;
+          @media only screen and (max-width: $maket800){
+            margin-left: -5px;
+            width: 156px;
+            height: 80px;
           }
-          .line{
-            width: 12px;
-            height: 2px;
-            background: #fff;
-            margin-bottom: 2px;
-            &:first-child{
-              transform-origin: 100% 0;
-              transition: all 0.2s ease;
-            }
-            &:nth-child(2){
-              transition: all 0.15s ease;
-              opacity: 1;
-            }
-            &:last-child{
-              transition: all 0.2s ease;
-              transform-origin: 100% 100%;
-            }
-          }
-          &.active{
-            .line{
-              margin-bottom: 4px;
-              &:first-child{
-                transform: rotate(-45deg);
-                width: 18px;
-              }
-              &:nth-child(2){
-                opacity: 0;
-                width: 18px;
-              }
-              &:last-child{
-                transform: rotate(45deg);
-                width: 18px;
-              }
-            }
+          @media only screen and (max-width: $maket800){
+            margin-top: 0;
+            width: 100px;
+            height: 50px;
           }
         }
-
-        .menu { 
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          @media only screen and (max-width: $maket320){
-            position: absolute;
-            right: 0;
-            top: 0;
-            flex-direction: column;
-            justify-content: flex-end;
-            width: 260px;
-            background: #0027a5;
-            padding-left: 29px;
-            padding-top: 82px;
-            padding-bottom: 57px;
-            padding-right: 15px;
-            border-radius: 0 0 0 8px;
-          }
-          .item { 
-            font-size: 15px;
-            height: 34px;
-            line-height: 34px;
-            justify-content: flex-end;
-            margin-left: 40px;
-            color: #fff;
-            cursor: pointer;
-            position: relative;
-            &:first-child{
-              margin-left: 0;
-            }
-            @media only screen and (max-width: $maket1024){
-              margin-left: 35px;
-            }
-            
-            @media only screen and (max-width: $maket800){
-              font-size: 14px;
-              margin-left: 19px;
-            }
-            @media only screen and (max-width: 860px){
-              font-size: 13px;
-              margin-left: 15px;
-            }
-            @media only screen and (max-width: $maket320){
-              font-size: 14px;
-              line-height: 26px;
-              margin-left: 0;
-              height: auto;
-              margin-bottom: 14px;
-              &:last-child{
-                margin-bottom: 0;
-              }
-              &:after{
-                display: none;
-              }
-            }
-            &:after{
-              content: '';
-              background: transparent;
-              width: 100%;
-              height: 2px;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              transition: all 0.12s ease-in-out;
-            }
-            &:hover{
-              &:after{
-                background: #fff;
-              }
-            }
-          }
-          @media only screen and (max-width: $maket320){
-            transform: translateX(100%);
-            transition: transform 0.2s ease;
-            &.active{
-              transform: translateX(0%)
-            }
-          }
-        }
-      }/*end menuBlock*/
+      }
     }
   }
 
@@ -471,30 +590,34 @@ $maket320: 800px;
     .layout { 
       display: flex;
       flex-direction: row;
-      padding-top: 174px;
-      padding-bottom: 124px;
+      //padding-top: 174px;
+      padding-bottom: 113px;
       position: relative;
       @media only screen and (max-width: $maket1024){
-        padding-top: 142px;
+        //padding-top: 142px;
         padding-bottom: 114px;
       }
       @media only screen and (max-width: $maket800){
-        padding-top: 60px;
-        padding-bottom: 80px;
-        flex-direction: column;
-      }
-      @media only screen and (max-width: $maket320){
-        padding-top: 67px;
+        //padding-top: 60px;
         padding-bottom: 40px;
         flex-direction: column;
       }
+      @media only screen and (max-width: $maket320){
+        //padding-top: 67px;
+        padding-top: 0;
+        padding-bottom: 30px;
+        flex-direction: column;
+      }
       .lc { 
-        color: #fff;
-        padding-top: 66px;
-        margin-right: 180px;
+        user-select: none;
+        position: relative;
+        z-index: 1;
+        color: map-get($colors, grayText);
+        padding-top: 16px;
+        margin-right: 20px;
         @media only screen and (max-width: $maket1024){
-          padding-top: 66px;
-          margin-right: 60px;          
+          padding-top: 16px;
+          margin-right: 20px;          
         }
         @media only screen and (max-width: $maket800){
           margin-right: 0;
@@ -505,48 +628,74 @@ $maket320: 800px;
           padding-top: 8px;
         }
         .text1 { 
-          font-family: 'Montserrat';
-          font-size: 48px;
-          line-height: 58px;
-          font-weight: 500;
-          letter-spacing: 0.5px;
+          font-family: 'Roboto';
+          font-size: 13px;
+          line-height: 15px;
+          font-weight: 400;
+          //letter-spacing: 0.5px;
           @media only screen and (max-width: $maket1024){
-            font-size: 40px;
-            line-height: 48px;
+          font-size: 13px;
+          line-height: 15px;
           }
           @media only screen and (max-width: $maket800){
-            font-size: 35px;
-            line-height: 42px;
-            letter-spacing: 0.3px;
+            font-size: 13px;
+            line-height: 15px;
+            //letter-spacing: 0.3px;
             text-align: center;
           }
           @media only screen and (max-width: $maket320){
             font-weight: 600;
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 18px;
+            line-height: 20px;
             text-align: center;
             letter-spacing: 0.2px;
+            margin-bottom: 20px;
           }
         }
 
         .text2 { 
-          font-size: 20px;
-          line-height: 27px;
-          margin-top: 39px;
+          font-size: 18px;
+          line-height: 22px;
+          margin-top: 44px;
+          display: inline-flex;
+          position: relative;
+          margin-bottom: 370px;
+          margin-right: 40px;
+          &:before{
+            content: '';
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            position: absolute;
+            width: calc(100% + 36px);
+            height: calc(100% + 56px);
+            border: 1px solid map-get($colors, yellow);
+            @media only screen and (max-width: $maket1024){
+              width: 100%;
+            }
+            @media only screen and (max-width: $maket320){
+              height: calc(100% + 24px);
+            }
+          }
           @media only screen and (max-width: $maket1024){
             margin-top: 51px;
+            padding: 0 50px;
           }
           @media only screen and (max-width: $maket800){
+            margin-bottom: 50px;
             font-size: 18px;
-            margin-top: 32px;
+            margin-top: 51px;
             line-height: 25px;
-            padding: 0 10%;
+            padding: 0 5%;
           }
           @media only screen and (max-width: $maket320){
             font-size: 13px;
             line-height: 16px;
-            margin-top: 24px;
+            margin-top: 10px;
+            margin-bottom: 30px;
             text-align: center;
+            margin-right: 0;
+            padding-top: 0px;
           }
           div{
             margin-bottom: 27px;
@@ -564,8 +713,8 @@ $maket320: 800px;
             }
           }
           span{
-            font-weight: bold;
             text-transform: uppercase;
+            color: map-get($colors, button);
           }
         }
 
@@ -577,7 +726,7 @@ $maket320: 800px;
           white-space: nowrap;
           font-size: 18px;
           color: #fff;
-          font-family: 'Montserrat';
+          font-family: 'Roboto';
           font-weight: 500;
           margin-top: 48px;
           padding: 0 30px;
@@ -625,18 +774,47 @@ $maket320: 800px;
           }
         }
       }
-
+      .blockBg_v2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -61px;
+        top: 0;
+        background-size: 117%;
+        background-repeat: no-repeat;
+        background-image: url("../images/b1-img1_v2.jpg");
+        background-position: 50% 100%;
+        @media only screen and ( max-width: 1920px ) {
+          background-image: url("../images/b1-img1_v2.jpg");
+        }
+        @media only screen and ( max-width: 800px ) {
+          background-image: url("../images/b1-img1_v2-s.jpg");
+          background-position: 0 50%;
+        }
+        @media only screen and (max-width: $maket800){
+          position: relative;
+          height: 200px;
+          background-size: auto 100%;
+          left: 0;
+          background-position: 50% 100%;
+        }
+      }
       .rc { 
+        position: relative;
+        z-index: 1;
+        padding-top: 20px;
         min-width: 340px;
         width: 340px;
+        margin-left: auto;
         @media only screen and (max-width: $maket1024){
           padding-top: 2px;
         }
         @media only screen and (max-width: $maket800){
           min-width: 280px;
           width: 280px;
-          padding-top: 64px;
+          padding-top: 30px;
           align-self: center;
+          margin-left: 0;
         }
         @media only screen and (max-width: $maket320){
           padding: 37px 15px 0;
@@ -644,23 +822,24 @@ $maket320: 800px;
           width: 100%;
         }
         .formBlock { 
+          border: 2px solid map-get($colors, yellow);
           background: #fff;
-          border-radius: 6px;
-          padding: 36px 40px 12px;
+          border-radius: 0px;
+          padding: 20px 40px 50px;
           display: flex;
           flex-direction: column;
           overflow: hidden;
           @media only screen and (max-width: $maket800){
-            padding: 37px 35px 38px;
+            padding: 20px 35px 38px;
           }
           @media only screen and (max-width: $maket320){
-            padding: 27px 30px 30px;
+            padding: 20px 30px 30px;
           }
           .title { 
             font-weight: 500;
             color: #474747;
             font-size: 20px;
-            font-family: 'Montserrat';
+            font-family: 'Roboto';
             letter-spacing: 0.15px;
             margin-bottom: 19px;
             @media only screen and (max-width: $maket800){
@@ -715,8 +894,8 @@ $maket320: 800px;
             }
             .desc{
               color: #848484;
-              font-size: 14px;
-              line-height: 17px;
+              font-size: 12px;
+              line-height: 15px;
               padding-left: 16px;
               @media only screen and (max-width: $maket800){
                 font-size: 12px;
@@ -725,7 +904,7 @@ $maket320: 800px;
                 padding-top: 11px;
               }
               a{
-                color: #41569a;
+                color: #5eace5;
                 text-decoration: underline;
                 &:hover{
                   text-decoration: none;
@@ -768,6 +947,7 @@ $maket320: 800px;
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+            margin-top: 5px;
           }
           &:last-child{
             margin-bottom: 0;
@@ -804,7 +984,7 @@ $maket320: 800px;
           .desc { 
             transition: all 0.12s ease-out;
             left: 2px;
-            top: 4px;
+            top: 5px;
             position: absolute;
             font-size: 16px;
             line-height: 28px;
@@ -840,23 +1020,24 @@ $maket320: 800px;
 
         input[type='submit'],
         .formToggleButton{
-          margin-top: 41px;
+          margin-top: 36px;
           text-align: center;
           border: none;
           @extend .defaultButton;
-          border-radius: 30px;
-          background: #0027a5;
-          line-height: 58px;
+          border-radius: 2px;
+          background: map-get($colors, button);
+          line-height: 48px;
           white-space: nowrap;
           letter-spacing: 0.15px;
           padding: 0 53px 2px;
           font-size: 18px;
           color: #fff;
-          font-family: 'Montserrat';
-          font-weight: 500;
+          font-family: 'Roboto';
+          font-weight: 400;
           cursor: pointer;
           display: block;
-          width: calc(100% - 18px);
+          width: 100%;
+          height: 50px;
           &.loading{
             opacity: 0.5;
             box-shadow: none;
@@ -877,7 +1058,7 @@ $maket320: 800px;
           }
           &~input[type='submit'],
           &~.formToggleButton{
-            margin-top: 20px;
+            margin-top: 12px;
           }
         }
         .formToggleButton{
@@ -893,118 +1074,114 @@ $maket320: 800px;
 
   #b2 { 
     color: #474747;
-    padding-top: 57px;
-    padding-bottom: 85px;
+    padding-top: 54px;
+    padding-bottom: 40px;
     @media only screen and (max-width: $maket1024){
-      padding-top: 89px;
-      padding-bottom: 95px;
+      padding-top: 54px;
+      padding-bottom: 40px;
     }
     @media only screen and (max-width: $maket800){
-      padding-top: 81px;
-      padding-bottom: 91px;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
     @media only screen and (max-width: $maket320){
       padding-top: 35px;
-      padding-bottom: 45px;
+      padding-bottom: 40px;
     }
     .layout { 
       
       .title { 
+        text-align: center;
         font-size: 48px;
         font-weight: 500;
-        font-family: 'Montserrat';
-        margin-bottom: 20px;
-        @media only screen and (max-width: $maket1024){
-          font-size: 45px;
-          margin-bottom: 37px;
-        }
+        font-family: 'Roboto';
+        margin-bottom: 45px;
+        color: map-get($colors, grayText);
         @media only screen and (max-width: $maket800){
           font-size: 35px;
+          font-weight: 400;
           line-height: 42px;
-          margin-bottom: 41px;
         }
         @media only screen and (max-width: $maket320){
           font-size: 20px;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 1.2;
           text-align: center;
           margin-bottom: 28px;
         }
+
       }
 
       .items { 
-
+        display: flex;
+        @media only screen and (max-width: $maket320){
+          flex-direction: column;
+        }
         .item { 
           display: flex;
-          flex-direction: row;
-          border-bottom: 1px solid #d6d7d9;
-          width: 100%;
+          flex-direction: column;
+          flex: 0 0 25%;
+          padding: 0 15px;
           align-items: center;
-          padding-top: 24px;
-          padding-bottom: 25px;
-          &:first-child{
-            padding-top: 0;
-          }
-          @media only screen and (max-width: $maket1024){
-            padding-bottom: 25px;
-            &:first-child{
-              padding-bottom: 8px;
-              .number { 
-                padding-top: 6px;
-              }
-            }
-          }
-          @media only screen and (max-width: $maket800){
-            padding-top: 34px;
-            padding-bottom: 24px;
-            &:first-child{
-              padding-bottom: 8px;
-              .number { 
-                padding-top: 4px;
-              }
-            }
-          }
           @media only screen and (max-width: $maket320){
-            padding-top: 34px;
-            padding-bottom: 0px;
+            flex-direction: row;
+            border-bottom: 1px solid #d6d7d9;
+            padding: 0;
+            padding-bottom: 5px;
+            padding-top: 25px;
             &:first-child{
-              padding-bottom: 5px;
-              .number { 
-                padding-top: 2px;
-              }
+              padding-top: 0;
             }
           }
           .number { 
-            min-width: 57px;
-            width: 57px;
+            background: map-get($colors, blue);
+            width: 102px;
+            height: 102px;
+            border-radius: 100%;
+            color: #fff;
             font-size: 60px;
-            font-family: 'Montserrat';
-            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
             @media only screen and (max-width: $maket800){
-              font-size: 60px;
-              font-weight: 500;
-              width: 57px;
-              min-width: 57px;
-              padding-top: 0;
+              width: 80px;
+              height: 80px;
+              font-size: 50px;
             }
             @media only screen and (max-width: $maket320){
+              height: auto;
               font-size: 35px;
               line-height: 35px;
               font-weight: 700;
               width: 33px;
               min-width: 33px;
+              background: none;
+              padding-top: 2px;
+              color: map-get($colors, grayText);
             }
           }
 
           .text { 
+            text-align: center;
+            color: map-get($colors, grayText);
+            font-weight: 300;
             font-size: 18px;
             line-height: 26px;
+            margin-top: 24px;
             @media only screen and (max-width: $maket800){
-              font-size: 16px;
+              margin-top: 14px;
+              font-size: 15px;
+              line-height: 19px;
             }
             @media only screen and (max-width: $maket320){
               font-size: 12px;
               line-height: 1.2;
+              text-align: left;
+              margin: 0;
+            }
+            span{
+              font-weight: 500;
             }
           }
         }
@@ -1015,13 +1192,13 @@ $maket320: 800px;
   #b3 { 
 
     .layout { 
-      padding-top: 93px;
-      padding-bottom: 56px;
+      padding-top: 39px;
+      padding-bottom: 44px;
       @media only screen and (max-width: $maket1024){
-        padding-top: 69px;
+        padding-top: 39px;
       }
       @media only screen and (max-width: $maket800){
-        padding-top: 80px;
+        padding-top: 39px;
         padding-bottom: 75px;
       }
       @media only screen and (max-width: $maket320){
@@ -1044,11 +1221,27 @@ $maket320: 800px;
           width: 100%;
           display: flex;
           flex-direction: column;
-          padding-bottom: 23px;
+          padding-bottom: 25px;
           text-align: center;
           position: relative;
           &:first-child{
             margin-left: 0;
+            .name, .priceBlock{
+              background: #5cb5e5;
+            }
+          }
+          &:nth-child(2){
+            .name, .priceBlock{
+              background: #e20055;
+              @media only screen and (min-width: $maket320) and (max-width: $maket800){
+                background: darken(#e20055, 10%);
+              }
+            }
+          }
+          &:nth-child(3){
+            .name, .priceBlock{
+              background: #f89b24;
+            }
           }
           @media only screen and (min-width: $maket320) and (max-width: $maket800){
             flex-direction: row;
@@ -1074,14 +1267,14 @@ $maket320: 800px;
 
           .name { 
             background: #fffeaa;
-            border-bottom: 1px dashed #acacac;
-            color: #6f6f6f;
+            border-bottom: 1px dashed #fff;
+            color: #fff;
             font-size: 25px;
-            font-family: 'Montserrat';
-            font-weight: 500;
-            height: 83px;
-            min-height: 83px;
-            padding-top: 33px;
+            font-family: 'Roboto';
+            font-weight: 400;
+            height: 91px;
+            min-height: 91px;
+            padding-top: 34px;
             box-sizing: border-box;
             flex: 1 1 auto;
             @media only screen and (max-width: $maket1024){
@@ -1113,12 +1306,12 @@ $maket320: 800px;
           }
 
           .priceBlock { 
-            height: 117px;
-            min-height: 117px;
-            padding-top: 28px;
+            height: 109px;
+            min-height: 109px;
+            padding-top: 21px;
             background: #fffeaa;
-            font-family: 'Montserrat';
-            font-weight: 500;
+            font-family: 'Roboto';
+            font-weight: 400;
             @media only screen and (min-width: $maket320) and (max-width: $maket800){
               position: absolute;
               left: 0px;
@@ -1149,7 +1342,7 @@ $maket320: 800px;
               max-width: calc(100% - 105px);
             }
             .price { 
-              color: #474747;
+              color: #fff;
               font-size: 35px;
               @media only screen and (min-width: $maket320) and (max-width: $maket800){
                 font-size: 25px;
@@ -1191,7 +1384,7 @@ $maket320: 800px;
             }
             .priceDesc{
               font-size: 14px;
-              color: #474747;
+              color: #fff;
               margin-top: 2px;
               @media only screen and (min-width: $maket320) and (max-width: $maket800){
                 font-size: 12px;
@@ -1208,11 +1401,11 @@ $maket320: 800px;
           }
 
           .description { 
-            padding-top: 14px;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-top: 16px;
+            padding-left: 15px;
+            padding-right: 15px;
             font-size: 16px;
-            line-height: 32px;
+            line-height: 30px;
             color: #171717;
             height: 100%;
             flex: 100 1 auto;
@@ -1251,7 +1444,7 @@ $maket320: 800px;
 
           .buttonWrap { 
             text-align: center;
-            margin-top: 18px;
+            margin-top: 23px;
             @media only screen and (max-width: $maket1024){
               margin-top: 21px;
             }
@@ -1266,22 +1459,25 @@ $maket320: 800px;
             }
             .button { 
               font-size: 18px;
-              line-height: 44px;
+              line-height: 48px;
               color: #fff;
-              font-family: 'Montserrat';
-              font-weight: 500;
-              background: #0027a5;
-              height: 45px;
-              width: 200px;
-              min-width: 200px;
+              font-family: 'Roboto';
+              background: map-get($colors, button);
+              height: 50px;
+              width: 66%;
               display: inline-block;
               max-width: 100%;
-              border-radius: 20px;
+              border-radius: 2px;
               cursor: pointer;
               transition: all 0.12s ease-in-out;
               &:hover{
-                background: lighten(#0027a5, 10%);
+                
                 box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.5);
+              }
+              @media only screen and (min-width: $maket320) and (max-width: $maket800){
+                width: 200px;
+                height: 44px;
+                line-height: 44px;
               }
               @media only screen and (max-width: $maket320){
                 height: 42px;
@@ -1292,81 +1488,184 @@ $maket320: 800px;
           }
         }
       }
-
-      .tarifsBottomDesc { 
-        margin-top: 48px;
-        display: flex;
-        @media only screen and (max-width: $maket1024){
-          margin-top: 28px;
+    }
+  }
+  .tarifsBottomDesc { 
+    background: #f5f5f5;
+    .iw{
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 16px;
+      max-width: 1280px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media only screen and (max-width: $maket320){
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-direction: column;
+      }
+    }
+    @media only screen and (max-width: $maket1024){
+      //margin-top: 28px;
+    }
+    @media only screen and (max-width: $maket320){
+      flex-direction: column;
+      //margin-top: 14px;
+    }
+    
+    .lc { 
+      margin-left: 20px;
+      text-align: right;
+      font-size: 16px;
+      line-height: 23px;
+      color: #000;
+      flex: 0 0 auto;
+      @media only screen and (max-width: $maket320){
+        font-size: 12px;
+        line-height: 18px;
+        padding-left: 10px;
+      }
+      @media only screen and (max-width: $maket800){
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @media only screen and (max-width: $maket320){
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .sp{
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 43px;
+        letter-spacing: 1px;
+        span{
+          font-size: 45px;
+          line-height: 45px;
+        }
+        @media only screen and (max-width: $maket800){
+          font-size: 28px;
+          line-height: 38px;
+          span{
+            font-size: 32px;
+            line-height: 34px;
+          }
         }
         @media only screen and (max-width: $maket320){
-          flex-direction: column;
-          margin-top: 14px;
-        }
-        
-        .lc { 
-          font-size: 18px;
-          line-height: 24px;
-          color: #fff;
-          padding-top: 6px;
-          @media only screen and (max-width: $maket320){
-            font-size: 12px;
-            line-height: 18px;
-            padding-left: 10px;
-          }
-          .sp{
-            letter-spacing: 0.5px;
-          }
-          .br { 
-            @media only screen and (min-width: $maket800){
-              display: block;
-              width: 0;
-              height: 0;
-              overflow: hidden;
-              padding: 0;
-              margin: 0;
-            }
+          font-size: 20px;
+          line-height: 30px;
+          span{
+            font-size: 24px;
+            line-height: 30px;
           }
         }
+      }
+      .br { 
+        @media only screen and (min-width: $maket800){
+          display: block;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .cc{
+      margin: 0 49px;
+      position: relative;
+      top: 4px;
+      .icon{
+        width: 57px;
+        height: 57px;
+        fill: map-get($colors, orange);
+      }
+      @media only screen and (max-width: $maket800){
+        margin: 0 30px;
+        .icon{
+          width: 40px;
+          height: 40px;
+        }
+      }
+      @media only screen and (max-width: $maket320){
+        display: none;
+      }
+    }
 
-        .rc { 
-          margin-left: auto;
-          @media only screen and (max-width: $maket320){
-            margin-left: 0;
+    .rc { 
+      padding-top: 7px;
+      flex: 0 0 auto;
+      @media only screen and (max-width: $maket320){
+        margin-left: 0;
+      }
+      .button { 
+        font-family: 'Roboto';
+        width: 411px;
+        letter-spacing: 0.2px;
+        text-align: center;
+        height: 80px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 78px;
+        background: map-get($colors, button);
+        transition: all 0.12s ease-in-out;
+        border-radius: 2px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        .icon{
+          fill: #fff;
+          width: 44px;
+          height: 51px;
+          margin-right: 18px;
+          position: relative;
+          top: -4px;
+          left: -5px;
+        }
+        .txt{
+          font-size: 18px;
+          line-height: 22px;
+        }
+        &:hover{
+          
+          box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.5);
+        }
+        @media only screen and (max-width: $maket1024){
+          margin-top: 0;
+          height: 52px;
+          font-size: 16px;
+          line-height: 54px;
+          width: 376px;
+          .icon{
+            top: -2px;
+            width: 30px;
+            height: 42px;
           }
-          .button { 
-            font-family: 'Montserrat';
-            font-weight: 500;
-            width: 477px;
-            letter-spacing: 0.2px;
-            text-align: center;
-            height: 60px;
-            color: #1a1a1a;
-            font-size: 18px;
-            line-height: 63px;
-            background: #fffe8e;
-            transition: all 0.12s ease-in-out;
-            border-radius: 20px;
-            cursor: pointer;
-            &:hover{
-              background: darken(#fffe8e, 10%);
-              box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.5);
-            }
-            @media only screen and (max-width: $maket1024){
-              margin-top: 12px;
-              height: 52px;
-              font-size: 16px;
-              line-height: 54px;
-              width: 376px;
-            }
-            @media only screen and (max-width: $maket320){
-              margin-top: 10px;
-              width: 100%;
-              height: 42px;
-              margin-left: 0;
-              font-size: 14px;
-              line-height: 43px;
-            }
+        }
+        @media only screen and (max-width: $maket320){
+          margin-top: 10px;
+          width: 100%;
+          height: 42px;
+          margin-left: 0;
+          font-size: 14px;
+          line-height: 43px;
+          padding: 0 15px;
+          .icon{
+            top: -2px;
+            width: 24px;
+            height: 36px;
+            margin-right: 10px;
+          }
+          .txt{
+            font-size: 14px;
+            line-height: 20px;
           }
         }
       }
@@ -1376,21 +1675,22 @@ $maket320: 800px;
   #b4 { 
 
     .layout { 
-      padding-top: 93px;
-      padding-bottom: 118px;
+      padding-top: 61px;
+      padding-bottom: 30px;
       @media only screen and (max-width: $maket800){
-        padding-top: 84px;
-        padding-bottom: 90px;
+        padding-top: 60px;
+        padding-bottom: 60px;
       }
       @media only screen and (max-width: $maket320){
         padding-top: 31px;
         padding-bottom: 40px;
       }
       .title { 
+        text-align: center;
         font-size: 48px;
         font-weight: 500;
-        font-family: 'Montserrat';
-        margin-bottom: 20px;
+        font-family: 'Roboto';
+        margin-bottom: 10px;
         @media only screen and (max-width: $maket1024){
           font-size: 45px;
           margin-bottom: 23px;
@@ -1424,9 +1724,6 @@ $maket320: 800px;
             width: 764px;
             min-width: 764px;
           }
-          &:first-child{
-            margin-top: 48px;
-          }
           @media only screen and (max-width: $maket800){
             margin-top: 40px;
             &:first-child{
@@ -1437,41 +1734,159 @@ $maket320: 800px;
             width: 100%;
             min-width: 100%;
             margin-top: 24px;
+            flex-direction: column;
+            align-items: center;
             &:first-child{
               margin-top: 0;
             }
           }
-          .flagBlock { 
-            border-left: 1px solid #0027a5;
+          .number{
+            width: 134px;
+            height: 132px;
+            display: flex;
+            flex: 0 0 134px;
+            align-items: center;
+            justify-content: center;
+            font-size: 75px;
+            line-height: 75px;
+            font-weight: 700;
+            color: #fff;
+            background: red;
+            margin-right: 24px;
             position: relative;
-            width: 22px;
-            min-width: 22px;
-            .icon { 
+            &:after{
+              content: '';
+              height: 100%;
+              width: 20px;
               position: absolute;
-              left: 0;
-              top: 20px;
-              fill: #0027a5;
-              width: 28px;
-              height: 14px;
-              @media only screen and (max-width: $maket320){
-                display: none;
+              left: 100%;
+              background-image: url("../images/sqBg.png");
+              background-size: auto 100%;
+              background-repeat: no-repeat;
+            }
+            .figure{
+              background: #fff;
+              border-radius: 100%;
+              position: absolute;
+              left: 50%;
+              top: 100%;
+              margin-top: -14px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              transform: translateX(-50%);
+              align-items: center;
+              .t{
+                width: 27px;
+                height: 27px;
+                align-items: center;
+                justify-content: center;
+                border-color: red;
+                border-style: solid;
+                div{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-width: 3px;
+                  border-radius: 100%;
+                  border-color: blue;
+                  width: 100%;
+                  height: 100%;
+                  border-style: solid;
+                }
+                .s1{
+                  border-color: #fff;
+                }
+                .s2{
+                  border-color: red;
+                }
+                .s3{
+                  border-color: #fff;
+                }
+                .s4{
+                  border: none;
+                  width: 100%;
+                  height: 100%;
+                  background: red;
+                }
+              }
+
+              .l{
+                margin-top: -2px;
+                background: #858686;
+                height: 14px;
+                width: 1px;
+              }
+              .b{
+                width: 7px;
+                height: 7px;
+                border-radius: 100%;
               }
             }
-            @media only screen and (max-width: $maket320){
-              width: 11px;
-              min-width: 11px;
+
+          }
+          &:nth-child(1),
+          &:nth-child(3){
+            padding-left: 20px;
+          }
+          &:nth-child(1){
+            margin-top: 18px;
+            .number{
+              background: #e25355;
             }
-    
+            .figure{
+              .t{
+                .s2, .s4{
+                  background: #e25355;
+                  border-color: #e25355;
+                }
+              }
+              .b{
+                background: #e25355;
+              }
+            }
+          }
+          &:nth-child(2){
+            margin-top: 15px;
+            .number{
+              background: #48a5d9;
+            }
+            .figure{
+              .t{
+                .s2, .s4{
+                  background: #48a5d9;
+                  border-color: #48a5d9;
+                }
+              }
+              .b{
+                background: #48a5d9;
+              }
+            }
+          }
+          &:nth-child(3){
+            .number{
+              background: #f89b24;
+            }
+            .figure{
+              .t{
+                .s2, .s4{
+                  background: #f89b24;
+                  border-color: #f89b24;
+                }
+              }
+              .b{
+                background: #f89b24;
+              }
+            }
           }
 
           .item_text { 
-
             .item_title { 
               font-size: 22px;
               line-height: 32px;
               color: #171717;
-              padding-left: 35px;
-              padding-top: 9px;
+              padding-left: 0px;
+              padding-top: 18px;
               position: relative;
               .icon{
                 display: none;
@@ -1501,8 +1916,8 @@ $maket320: 800px;
             .item_desc { 
               font-size: 18px;
               line-height: 26px;
-              margin-top: 11px;
-              padding-bottom: 15px;
+              margin-top: 10px;
+              padding-bottom: 0px;
               color: #595959;
               @media only screen and (max-width: $maket800){
                 font-size: 16px;
@@ -1518,14 +1933,123 @@ $maket320: 800px;
             }
           }
           &:nth-child(even){
-            align-self: flex-end;
+            width: 75%;
+            min-width: 0;
+            max-width: calc(75%);
+            margin-left: 21%;
+          }
+          @media only screen and (max-width: $maket800){
+            &:nth-child(even),
+            &:nth-child(1),
+            &:nth-child(1),
+            &:nth-child(3){
+              padding-left: 0;
+              width: 100%;
+              margin: 15px 0;
+              .item_title{
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 500;
+              }
+              .item_desc{
+                font-size: 14px;
+                line-height: 18px;
+                padding-bottom: 0;
+              }
+              .number{
+                flex: 0 0 100px;
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+                .figure{
+                  transform: scale(0.8) translateX(-60%);
+                }
+              }
+            }
+
+            .icon{
+              top: -2px;
+              width: 30px;
+              height: 42px;
+            }
+          }
+          @media only screen and (max-width: $maket320){
+            &:nth-child(even),
+            &:nth-child(1),
+            &:nth-child(1),
+            &:nth-child(3){
+              padding-left: 0;
+              min-width: 100%;
+              max-width: 100%;
+              width: 100%;
+              margin: 15px 0;
+              .item_title{
+                font-size: 15px;
+                line-height: 21px;
+                font-weight: 500;
+                padding-left: 0;
+              }
+              .item_desc{
+                font-size: 13px;
+                line-height: 16px;
+                padding-bottom: 0;
+              }
+              .number{
+                padding: 0;
+                margin-left: 0;
+                flex: 0 0 60px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+                .figure{
+                  margin-top: -18px;
+                  transform: scale(0.5) translateX(-100%);
+                }
+              }
+            }
+
+            .icon{
+              top: -2px;
+              width: 30px;
+              height: 42px;
+            }
+          }
+        }
+      }
+
+      .botb{
+        margin: 88px auto 38px;
+        text-align: center;
+        padding: 26px 50px 26px;
+        border: 1px solid map-get($colors, yellow);
+        .ttl{
+          color: map-get($colors, text);
+          font-size: 30px;
+          line-height: 30px;
+          font-weight: 500;
+          margin-bottom: 7px;
+        }
+        .dsc{
+          font-size: 18px;
+          line-height: 26px;
+          color: #595959;
+        }
+        @media only screen and (max-width: $maket800){
+          margin: 40px auto 35px;
+          .ttl{
+            font-size: 22px;
+            line-height: 24px;
+          }
+          .dsc{
+            font-size: 15px;
+            line-height: 19px;
           }
         }
       }
 
       .butonW { 
         text-align: center;
-        margin-top: 100px;
+        margin-top: 38px;
         @media only screen and (max-width: $maket800){
           margin-top: 29px;
         }
@@ -1534,23 +2058,21 @@ $maket320: 800px;
         }
         .button { 
           width: 330px;
-          height: 45px;
+          height: 50px;
           display: flex;
           align-items: center;
           margin: 0 auto;
-          background: #0027a5;
-          border-radius: 20px;
+          background: map-get($colors, button);
+          border-radius: 2px;
           transition: all 0.12s ease-in-out;
           text-align: center;
           justify-content: center;
           cursor: pointer;
           &:hover{
             box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.5);
-            background: lighten(#0027a5, 10%);
           }
           .txt { 
-            font-weight: 500;
-            font-family: Montserrat;
+            font-family: Roboto;
             font-size: 18px;
             color: #fff;
             padding-bottom: 2px;
@@ -1591,8 +2113,8 @@ $maket320: 800px;
   }
 
   #preFooter { 
-    background: #0027a5;
-    color: #fff;
+    background: #f5f5f5;
+    color: #000000;
     @media only screen and (max-width: $maket320){
       background: #fffe8e;
       color: #595959;
@@ -1600,14 +2122,14 @@ $maket320: 800px;
     .layout{
       display: flex;
       padding-top: 91px;
-      padding-bottom: 95px;
+      padding-bottom: 80px;
       @media only screen and (max-width: $maket1024){
         padding-top: 79px;
         padding-bottom: 102px;
       }
       @media only screen and (max-width: $maket800){
-        padding-top: 54px;
-        padding-bottom: 62px;
+        padding-top: 30px;
+        padding-bottom: 40px;
       }
       @media only screen and (max-width: $maket320){
         flex-direction: column;
@@ -1623,6 +2145,10 @@ $maket320: 800px;
       @media only screen and (max-width: $maket1024){
         padding-top: 8px;
         width: 100%;
+      }
+      @media only screen and (max-width: $maket1024){
+        font-size: 18px;
+        line-height: 22px;
       }
       @media only screen and (max-width: $maket320){
         text-align: center;
@@ -1652,7 +2178,6 @@ $maket320: 800px;
 
     .rc { 
       margin-left: auto;
-      padding-top: 3px;
       @media only screen and (max-width: $maket800){
         padding-top: 17px;
       }
@@ -1661,45 +2186,69 @@ $maket320: 800px;
         padding-top: 3px;
       }
       .button { 
-        font-family: 'Montserrat';
-        font-weight: 500;
-        width: 477px;
+        font-family: 'Roboto';
+        width: 411px;
         letter-spacing: 0.2px;
         text-align: center;
-        height: 60px;
-        color: #1a1a1a;
+        height: 80px;
+        color: #fff;
         font-size: 18px;
-        line-height: 63px;
-        background: #fffe8e;
+        line-height: 78px;
+        background: map-get($colors, button);
         transition: all 0.12s ease-in-out;
-        border-radius: 20px;
+        border-radius: 2px;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        .icon{
+          fill: #fff;
+          width: 44px;
+          height: 51px;
+          margin-right: 18px;
+          position: relative;
+          top: -4px;
+          left: -5px;
+        }
+        .txt{
+          font-size: 18px;
+          line-height: 22px;
+        }
         &:hover{
+          
           box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.5);
-          background: darken(#fffe8e, 10%);
         }
         @media only screen and (max-width: $maket1024){
-          margin-top: 12px;
+          margin-top: 0;
           height: 52px;
           font-size: 16px;
           line-height: 54px;
           width: 376px;
-        }
-        @media only screen and (max-width: $maket320){
-          background: #0027a5;
-          color: #fff;
-          width: 100%;
-          color: #fff;
-          height: 42px;
-          font-size: 14px;
-          line-height: 42px;
-          &:hover{
-            background: lighten(#0027a5, 10%);
+          .icon{
+            top: -2px;
+            width: 30px;
+            height: 42px;
           }
         }
-        
-
-
+        @media only screen and (max-width: $maket320){
+          margin-top: 10px;
+          width: 100%;
+          height: 42px;
+          margin-left: 0;
+          font-size: 14px;
+          line-height: 43px;
+          padding: 0 15px;
+          .icon{
+            top: -2px;
+            width: 24px;
+            height: 36px;
+            margin-right: 10px;
+          }
+          .txt{
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
       }
     }
   }
@@ -1790,7 +2339,7 @@ $maket320: 800px;
     font-weight: 500;
     color: #474747;
     font-size: 20px;
-    font-family: 'Montserrat';
+    font-family: 'Roboto';
     letter-spacing: 0.15px;
     margin-bottom: 19px;
     @media only screen and (max-width: $maket800){
@@ -1839,8 +2388,8 @@ $maket320: 800px;
     }
     .desc{
       color: #848484;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 12px;
+      line-height: 15px;
       padding-left: 16px;
       text-align: left;
       @media only screen and (max-width: $maket800){
@@ -2033,7 +2582,7 @@ $maket320: 800px;
     cursor: pointer;
     display: inline-block;
     margin: 0 auto;
-    height: 60px;
+    height: 50px;
     border-radius: 30px;
     &:hover{
       box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.5);
@@ -2046,18 +2595,18 @@ $maket320: 800px;
       height: 42px;
       border-radius: 21px;
     }
-    margin-top: 20px;
+    margin-top: 10px;
     border: none;
-    border-radius: 30px;
-    background: #0027a5;
-    line-height: 58px;
+    border-radius: 2px;
+    background: map-get($colors, button);
+    line-height: 48px;
     white-space: nowrap;
     letter-spacing: 0.15px;
     padding: 0 53px 2px;
     font-size: 18px;
     color: #fff;
-    font-family: 'Montserrat';
-    font-weight: 500;
+    font-family: 'Roboto';
+    font-weight: 400;
     cursor: pointer;
     display: block;
     width: calc(100% - 18px);
