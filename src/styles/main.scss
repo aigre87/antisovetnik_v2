@@ -896,11 +896,11 @@ $maket320: 800px;
               color: #848484;
               font-size: 12px;
               line-height: 15px;
-              padding-left: 16px;
+              //padding-left: 16px;
               @media only screen and (max-width: $maket800){
                 font-size: 12px;
                 line-height: 15px;
-                padding-left: 9px;
+                //padding-left: 9px;
                 padding-top: 11px;
               }
               a{
@@ -911,7 +911,7 @@ $maket320: 800px;
                 }
               }
               .desc_txt{
-                cursor: pointer;
+                //cursor: pointer;
               }
             }
           }
@@ -1306,8 +1306,8 @@ $maket320: 800px;
           }
 
           .priceBlock { 
-            height: 109px;
-            min-height: 109px;
+            height: 90px;
+            min-height: 90px;
             padding-top: 21px;
             background: #fffeaa;
             font-family: 'Roboto';
@@ -1402,8 +1402,8 @@ $maket320: 800px;
 
           .description { 
             padding-top: 16px;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
             font-size: 16px;
             line-height: 30px;
             color: #171717;
@@ -2390,12 +2390,12 @@ $maket320: 800px;
       color: #848484;
       font-size: 12px;
       line-height: 15px;
-      padding-left: 16px;
+      //padding-left: 16px;
       text-align: left;
       @media only screen and (max-width: $maket800){
         font-size: 12px;
         line-height: 15px;
-        padding-left: 9px;
+        //padding-left: 9px;
         padding-top: 11px;
       }
       a{
@@ -2406,7 +2406,7 @@ $maket320: 800px;
         }
       }
       .desc_txt{
-        cursor: pointer;
+        //cursor: pointer;
       }
     }
   }
